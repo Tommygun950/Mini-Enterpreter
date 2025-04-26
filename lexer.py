@@ -1,13 +1,13 @@
 """
 Contains all code for creating tokens and manipulating them.
-Name: [Your Name Here]
+
+Course: COMP 340
+Name: Thomas Rose
 """
 
 def tokenize(input: str) -> list[tuple[str, str]]:
     """
-    Given a string containing arithmetic code,
-    return the individual tokens with their types.
-    Returns a list of tuples in the format (type, value).
+    Return the individual tokens with their types.
     """
     parsed_data = parse_string(input)
     token_list = []
@@ -48,7 +48,6 @@ def parse_string(input: str) -> list[str]:
             if char in ['+', '-', '*', '/', '(', ')']:
                 tokens.append(char)
     
-    # Don't forget to add the last number if the string ends with a digit
     if current_number:
         tokens.append(current_number)
         
